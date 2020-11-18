@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Col'
@@ -12,14 +12,12 @@ class UserItem extends Component {
   render() {
     const {login, avatar_url,html_url} = this.props.user;
     return (
-
-
       <Container>
         <Row>
-          <Col sm={{ span: 3, offset: 4 }}> 
+          <Col sm={{ span: 3, offset: 4 }}>
             <div className="card text-center">
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={avatar_url} className="round-img" style={{ width: '100%' }} />
+            <Card style={wid}>
+              <Card.Img variant="top" src={avatar_url} className="round-img" style={width100} />
               <Card.Body>
                 <Card.Title>{login}</Card.Title>
                 <Card.Text>
@@ -33,11 +31,12 @@ class UserItem extends Component {
          </Col>
         </Row>
       </Container>
-
-
-
     );
   }
 }
+
+const wid = {width: '18rem'}
+
+const width100 = {width: '100%'}
 
 export default UserItem;

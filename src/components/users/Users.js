@@ -2,13 +2,8 @@
 import React, {Component} from 'react';
 import UserItem from './UserItem';
 
-class Users extends Component {
-    const userStyle = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridGap: 1rem
-    };
 
+class Users extends Component {
 
     state = {
         users: [
@@ -39,7 +34,7 @@ render() {
 
     return (
 
-        <div style={userStyle}>
+        <div style="userStyle">
             {this.state.users.map(user => (
                 <UserItem key={user.id} user={user } />
                 ))}
@@ -51,6 +46,12 @@ render() {
 
 
 
+}
+
+const userStyle = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)',
+  gridGap: '1rem'
 }
 
 export default Users;
