@@ -1,36 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import { PropTypes } from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 
-class Navby extends Component {
 
-    static defaultProps = {
-        title: 'Github Finder'
-    };
 
-    static propTypes = {
-        title: PropTypes.string.isRequired,
-        icon: PropTypes.string.isRequired
-    };
 
-    render() {
+const Navby = ({title}) => {
         return (
-
-
-            <Navbar bg="dark">
+            <Navbar bg="light">
                 <Navbar.Brand href="#home">
-                <FontAwesomeIcon icon={faCoffee} className="iconBrand" />
+                <FontAwesomeIcon icon={faGithub} />
                 </Navbar.Brand>
-                {this.props.title}
+                {title}
             </Navbar>
         );
-    }
 }
 
+Navby.defaultProps = {
+    title: 'Github Finder',
+};
+
+Navby.propTypes = {
+    title: PropTypes.string.isRequired,
+    // icon: PropTypes.string.isRequired
+};
 
 export default Navby;
