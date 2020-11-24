@@ -22,7 +22,7 @@ const Navby = ({title}) => {
 }
 
 Navby.defaultProps = {
-    title: 'Github Finder',
+    title: 'User Finder',
 };
 
 Navby.propTypes = {

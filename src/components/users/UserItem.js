@@ -19,9 +19,9 @@ const UserItem = ({user: {login, avatar_url, html_url}}) => {
               <Card.Img variant="top" src={avatar_url} className="round-img" style={width100}/>
               <Card.Body>
                 <Card.Title>{login}</Card.Title>
-                <Card.Text>
+                {/* <Card.Text>
                   Github URL: {html_url}
-                </Card.Text>
+                </Card.Text> */}
                 <Button variant="primary" href={html_url} target="_blank">View</Button>
               </Card.Body>
             </Card>
@@ -33,7 +33,7 @@ const UserItem = ({user: {login, avatar_url, html_url}}) => {
 
 }
 
-const wid = {width: '18rem'}
+const wid = {width: '8rem'}
 
 const width100 = {width: '100%'}
 
